@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Haven</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+ 
+  <header class="header">
+    <h1>Java Haven</h1>
+    <p>Your daily dose of caffeine and comfort.</p>
+  </header>
+  
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+  <main class="main-content">
+    <h2>Featured Coffees</h2>
+    <div class="flex-container">
+      <div class="flex-item">Espresso</div>
+      <div class="flex-item">Cappuccino</div>
+      <div class="flex-item">Latte</div>
+      <div class="flex-item">Mocha</div>
+    </div>
+  </main>
+  
+ 
+  <footer class="footer">
+    <p>&copy; 2025 Java Haven. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f1ea; 
+  color: #3e2a47; 
+}
+
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 60px 1fr auto;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #3e2a47;
+  color: #f4f1ea; 
+  text-align: center;
+  padding: 30px;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #d3b89e;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #3e2a47;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #f4f1ea;
+}
+
+.main-content {
+  grid-area: main;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+.flex-item {
+  background-color: #3e2a47;
+  color: #f4f1ea; 
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.flex-item:hover {
+  background-color: #d3b89e;
+  cursor: pointer;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #3e2a47;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 15px;
+}
+
+git
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}
